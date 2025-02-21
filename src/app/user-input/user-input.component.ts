@@ -9,6 +9,11 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './user-input.component.css',
 })
 export class UserInputComponent {
+  inputInitialValue = '0';
+  inputAnnualValue = '0';
+  inputExpectedReturn = '5';
+  inputDuration = '10';
+
   /*
    * Handles the submission of user input data.
    * This method is triggered when the user submits the form.
@@ -17,6 +22,14 @@ export class UserInputComponent {
    * @returns {void} This method does not return a value.
    */
   onSubmit() {
-    console.log('Works');
+    console.log(
+      this.inputInitialValue +
+        ' ' +
+        this.inputAnnualValue +
+        ' ' +
+        this.inputExpectedReturn +
+        ' ' +
+        this.inputDuration
+    );
   }
 }
